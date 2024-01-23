@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <PlainBlock />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import PlainBlock from "./components/PlainBlock/Index.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
+  name: "App",
+  components: { PlainBlock },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body {
+  font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-size: 16px;
   color: #2c3e50;
-  margin-top: 60px;
+  background: #2c3e50;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
